@@ -1,0 +1,8 @@
+{
+    "comments.collapseOnResolve": true,
+    "debug.console.collapseIdenticalLines": true,
+    "gitlens.views.collapseWorktreesWhenPossible": true,
+    "explorer.expandSingleFolderWorkspaces": false,
+    "editor.suggest.showFolders": true,
+    "explorer.compactFolders": false
+}
