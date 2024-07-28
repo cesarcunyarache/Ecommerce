@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Modal } from "@/components/ui/modal";
 import { on } from "events";
 import { Button } from "../ui/button";
+import { Loader2 } from "lucide-react";
 
 
 interface AlertModalProps {
@@ -26,7 +27,7 @@ export const AlertModal: React.FC<AlertModalProps> = ({
         setIsMounted(true);
     }, []);
 
-    if (!isMounted){
+    if (!isMounted) {
         return null;
     }
 
@@ -42,7 +43,11 @@ export const AlertModal: React.FC<AlertModalProps> = ({
                     Cancel
                 </Button>
                 <Button disabled={loading} variant="destructive" onClick={onConfirm}>
-                    Continue
+                    {
+                        loading &&
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+
+                    } Continue
                 </Button>
             </div>
 
